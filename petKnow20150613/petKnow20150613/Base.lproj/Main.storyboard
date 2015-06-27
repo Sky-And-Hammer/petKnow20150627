@@ -2577,14 +2577,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMd-Jc-b3c">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMd-Jc-b3c">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.48719349049999999" green="1" blue="0.35290388639999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Kay-86-WCl"/>
                                 </constraints>
                                 <state key="normal" title="注册">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -2598,17 +2597,17 @@
                                     </mask>
                                 </variation>
                                 <connections>
+                                    <action selector="registerAction:" destination="eaN-a5-yqA" eventType="touchUpInside" id="iun-jz-0mx"/>
                                     <segue destination="v46-6M-Uhn" kind="show" id="QAp-1c-hzc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvr-Ym-xNd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvr-Ym-xNd">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.48719349049999999" green="1" blue="0.35290388639999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="rPY-mG-LWa"/>
                                 </constraints>
                                 <state key="normal" title="登录">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -2621,6 +2620,9 @@
                                         <include reference="rPY-mG-LWa"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="logionAction:" destination="eaN-a5-yqA" eventType="touchUpInside" id="ipJ-kL-Bta"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Np-hJ-pe4">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -2653,7 +2655,7 @@
                                     <constraint firstAttribute="height" constant="30" id="iFd-9a-lMl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="iFd-9a-lMl"/>
@@ -2671,7 +2673,7 @@
                                     <constraint firstAttribute="height" constant="30" id="5ei-zG-Zgq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="5ei-zG-Zgq"/>
@@ -2753,8 +2755,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="LoginVc" id="6Qc-6f-SFW"/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="loginButton" destination="xvr-Ym-xNd" id="2YM-BK-MdT"/>
+                        <outlet property="passwordTextField" destination="E7q-na-UMh" id="n8C-BF-bii"/>
+                        <outlet property="registerButton" destination="cMd-Jc-b3c" id="gpJ-Jj-VWg"/>
+                        <outlet property="usernameTextField" destination="sfQ-dc-T9A" id="ig1-Nt-TVb"/>
                         <segue destination="bXf-8u-NLa" kind="show" identifier="hadLogin_success" id="ibI-mk-651"/>
                         <segue destination="Inx-J1-n3r" kind="show" id="E3v-KF-LpW"/>
                     </connections>
@@ -2794,6 +2799,9 @@
                                         <include reference="YTP-3E-iWQ"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="cancelAction:" destination="v46-6M-Uhn" eventType="touchUpInside" id="ngA-H2-QK4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmA-FF-ANz">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -2804,6 +2812,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="40" y="687" width="320" height="36"/>
                                 </variation>
+                                <connections>
+                                    <action selector="registerAction:" destination="v46-6M-Uhn" eventType="touchUpInside" id="LCF-Lz-6Wh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0q0-4S-WgI">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -2910,10 +2921,18 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="agreeButton" destination="0q0-4S-WgI" id="EIV-SE-O0e"/>
+                        <outlet property="passwordTextField" destination="lHb-Xx-vif" id="w6G-FL-gmC"/>
+                        <outlet property="protocolButton" destination="HVV-Ny-7q5" id="BZu-le-ZaA"/>
+                        <outlet property="sendVvericationButton" destination="uSq-ZJ-XYG" id="AcC-f1-4TB"/>
+                        <outlet property="usernameTextField" destination="ZKz-GD-Gdl" id="SAw-ca-LZ7"/>
+                        <outlet property="verificationTextField" destination="HZI-mG-ogO" id="QxN-23-1u1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Teg-1e-5MT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="858" y="-163.5"/>
+            <point key="canvasLocation" x="690" y="-195"/>
         </scene>
         <!--Forget Pwd View Controller-->
         <scene sceneID="oN3-56-HDB">
@@ -2936,7 +2955,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="rnZ-AD-JyQ"/>
@@ -2996,24 +3015,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhQ-0i-7A0">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.81176470590000005" green="0.81176470590000005" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="1wj-AR-2N4"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="取消">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="1wj-AR-2N4"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="1wj-AR-2N4"/>
-                                    </mask>
-                                </variation>
                                 <connections>
                                     <action selector="cancleBtnClicked:" destination="Inx-J1-n3r" eventType="touchUpInside" id="DC9-jF-9mb"/>
                                 </connections>
@@ -3024,16 +3030,18 @@
                             <constraint firstItem="VIt-PC-enb" firstAttribute="top" secondItem="h2G-eG-ZDq" secondAttribute="bottom" id="4zJ-0U-GXH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rx3-LY-Tp5" secondAttribute="trailing" constant="24" id="6nv-4k-OFz"/>
                             <constraint firstItem="rx3-LY-Tp5" firstAttribute="top" secondItem="VIt-PC-enb" secondAttribute="bottom" constant="32" id="Joh-bu-i6v"/>
-                            <constraint firstItem="MhQ-0i-7A0" firstAttribute="top" secondItem="rx3-LY-Tp5" secondAttribute="bottom" constant="417" id="KUy-dV-Xc5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MhQ-0i-7A0" secondAttribute="trailing" constant="24" id="O15-Mv-GCU"/>
                             <constraint firstItem="VIt-PC-enb" firstAttribute="leading" secondItem="8gT-S3-kWo" secondAttribute="leadingMargin" constant="32" id="QGu-1N-bZW"/>
-                            <constraint firstItem="MhQ-0i-7A0" firstAttribute="leading" secondItem="8gT-S3-kWo" secondAttribute="leadingMargin" constant="24" id="YqG-cD-G6S"/>
-                            <constraint firstItem="h2G-eG-ZDq" firstAttribute="top" secondItem="Gtq-or-ujV" secondAttribute="bottom" constant="176" id="ZNs-hu-nBo"/>
+                            <constraint firstItem="h2G-eG-ZDq" firstAttribute="top" secondItem="Gtq-or-ujV" secondAttribute="bottom" constant="176" id="ZNs-hu-nBo">
+                                <variation key="heightClass=regular-widthClass=compact" constant="24"/>
+                            </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="h2G-eG-ZDq" secondAttribute="trailing" constant="24" id="ZPG-MN-c0B"/>
                             <constraint firstItem="h2G-eG-ZDq" firstAttribute="leading" secondItem="8gT-S3-kWo" secondAttribute="leadingMargin" constant="24" id="ZXT-LP-dHa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VIt-PC-enb" secondAttribute="trailing" constant="32" id="hb0-zl-ghC"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="MhQ-0i-7A0" secondAttribute="trailing" constant="24" id="m12-ir-SVM"/>
+                            <constraint firstItem="x7t-AN-ULt" firstAttribute="top" secondItem="MhQ-0i-7A0" secondAttribute="bottom" constant="24" id="ix9-QG-zLY"/>
                             <constraint firstItem="rx3-LY-Tp5" firstAttribute="leading" secondItem="8gT-S3-kWo" secondAttribute="leadingMargin" constant="24" id="mNG-eF-NCb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VIt-PC-enb" secondAttribute="trailing" constant="24" id="pzx-6j-zdY"/>
+                            <constraint firstItem="MhQ-0i-7A0" firstAttribute="leading" secondItem="8gT-S3-kWo" secondAttribute="leadingMargin" constant="24" id="rvU-q4-SAF"/>
                             <constraint firstItem="VIt-PC-enb" firstAttribute="leading" secondItem="8gT-S3-kWo" secondAttribute="leadingMargin" constant="24" id="xL4-vm-FzC"/>
                         </constraints>
                         <variation key="default">
@@ -3047,9 +3055,9 @@
                                 <exclude reference="ZNs-hu-nBo"/>
                                 <exclude reference="ZPG-MN-c0B"/>
                                 <exclude reference="ZXT-LP-dHa"/>
-                                <exclude reference="KUy-dV-Xc5"/>
-                                <exclude reference="YqG-cD-G6S"/>
-                                <exclude reference="m12-ir-SVM"/>
+                                <exclude reference="ix9-QG-zLY"/>
+                                <exclude reference="O15-Mv-GCU"/>
+                                <exclude reference="rvU-q4-SAF"/>
                                 <exclude reference="6nv-4k-OFz"/>
                                 <exclude reference="Joh-bu-i6v"/>
                                 <exclude reference="mNG-eF-NCb"/>
@@ -3071,9 +3079,9 @@
                                 <include reference="ZNs-hu-nBo"/>
                                 <include reference="ZPG-MN-c0B"/>
                                 <include reference="ZXT-LP-dHa"/>
-                                <include reference="KUy-dV-Xc5"/>
-                                <include reference="YqG-cD-G6S"/>
-                                <include reference="m12-ir-SVM"/>
+                                <include reference="ix9-QG-zLY"/>
+                                <include reference="O15-Mv-GCU"/>
+                                <include reference="rvU-q4-SAF"/>
                                 <include reference="6nv-4k-OFz"/>
                                 <include reference="Joh-bu-i6v"/>
                                 <include reference="mNG-eF-NCb"/>
@@ -3088,13 +3096,31 @@
                     <connections>
                         <outlet property="accountNumTextField" destination="h2G-eG-ZDq" id="mzu-hP-hYB"/>
                         <outlet property="cancleBtn" destination="MhQ-0i-7A0" id="EKQ-c3-lbr"/>
-                        <outlet property="line" destination="VIt-PC-enb" id="M0U-xo-Nnj"/>
                         <outlet property="sendBtn" destination="rx3-LY-Tp5" id="M2Z-rt-TJ4"/>
+                        <segue destination="ac2-hH-9gd" kind="show" identifier="forgetBtn2_success" id="yTF-KX-MSW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cv6-Dr-DvH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1554" y="-163.5"/>
+            <point key="canvasLocation" x="1398" y="-195"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oK5-xh-RHn">
+            <objects>
+                <viewController id="ac2-hH-9gd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TgM-5a-Uu8"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Rq-Py-0zK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cp8-Cm-n2g">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ueb-Jt-biq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2095.5" y="-195"/>
         </scene>
         <!--问诊-->
         <scene sceneID="JIj-4e-QQu">
@@ -6658,6 +6684,6 @@
         <image name="星" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zq9-Z3-dM8"/>
+        <segue reference="E3v-KF-LpW"/>
     </inferredMetricsTieBreakers>
 </document>

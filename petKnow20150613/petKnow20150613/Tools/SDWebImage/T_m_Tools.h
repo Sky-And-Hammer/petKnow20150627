@@ -10,6 +10,9 @@
 #import <UIKit/UIKit.h>
 #import "SDImageCache.h"
 #import "SDWebImageDownloaderOperation.h"
+
+#import "httpGetTools.h"
+#import "ProgressHUD.h"
 @interface T_m_Tools : NSObject
 + (void)setImageToDest:(BOOL )yes1 AndThumbnail:(BOOL )yes2 AndURL:(NSString *)url AndDefaultImage:(NSString *)imageName AndBlock:(void (^)(UIImage *))animations;
 
