@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sg1-vU-0hT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sg1-vU-0hT">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -10,6 +10,7 @@
         <!--资料-->
         <scene sceneID="RvY-Om-45n">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WGm-7G-n37" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="0qE-gf-1mb" customClass="InfoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NM1-fI-ro3"/>
@@ -18,51 +19,10 @@
                     <view key="view" contentMode="scaleToFill" id="amu-tD-26H">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="CWI-bK-055">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="CWI-bK-055" secondAttribute="bottom" id="ADe-jm-hpt"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="CWI-bK-055" secondAttribute="bottom" constant="-64" id="CbP-vh-GAw"/>
-                            <constraint firstItem="CWI-bK-055" firstAttribute="leading" secondItem="amu-tD-26H" secondAttribute="leadingMargin" constant="-16" id="EsN-cJ-9iG"/>
-                            <constraint firstItem="CWI-bK-055" firstAttribute="top" secondItem="NM1-fI-ro3" secondAttribute="bottom" id="mdE-yK-uvW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CWI-bK-055" secondAttribute="trailing" constant="-16" id="q7e-gs-Pty"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="CWI-bK-055"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="ADe-jm-hpt"/>
-                                <exclude reference="CbP-vh-GAw"/>
-                                <exclude reference="EsN-cJ-9iG"/>
-                                <exclude reference="mdE-yK-uvW"/>
-                                <exclude reference="q7e-gs-Pty"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="CWI-bK-055"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="ADe-jm-hpt"/>
-                                <exclude reference="CbP-vh-GAw"/>
-                                <include reference="EsN-cJ-9iG"/>
-                                <include reference="mdE-yK-uvW"/>
-                                <include reference="q7e-gs-Pty"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="资料" id="fid-sP-vcj"/>
-                    <connections>
-                        <outlet property="infoTableView" destination="CWI-bK-055" id="dtB-1e-faq"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WGm-7G-n37" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4008" y="1368"/>
         </scene>
@@ -3572,6 +3532,9 @@
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="星" translatesAutoresizingMaskIntoConstraints="NO" id="oex-mT-2wS">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="158" y="0.0" width="18" height="19"/>
+                                                    </variation>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0al-lT-cCE">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -3580,10 +3543,16 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8c-Bh-Z9a">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="18" y="0.0" width="22" height="19"/>
+                                                    </variation>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6N6-uT-G48">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="57" y="0.0" width="22" height="19"/>
+                                                    </variation>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="星" translatesAutoresizingMaskIntoConstraints="NO" id="lxH-zj-iJI">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -3591,12 +3560,21 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etM-wv-xYw">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="136" y="0.0" width="22" height="19"/>
+                                                    </variation>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="星" translatesAutoresizingMaskIntoConstraints="NO" id="q2K-gO-8ge">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="79" y="0.0" width="18" height="19"/>
+                                                    </variation>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="星" translatesAutoresizingMaskIntoConstraints="NO" id="HHj-wB-RaV">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="18" height="19"/>
+                                                    </variation>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -3811,6 +3789,9 @@
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="星" translatesAutoresizingMaskIntoConstraints="NO" id="yej-zt-iKF">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="158" y="0.0" width="18" height="19"/>
+                                                    </variation>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pG2-0E-eHq">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -3819,10 +3800,16 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8K-qU-tzs">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="18" y="0.0" width="22" height="19"/>
+                                                    </variation>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oby-bd-Ue3">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="57" y="0.0" width="22" height="19"/>
+                                                    </variation>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="星" translatesAutoresizingMaskIntoConstraints="NO" id="MB9-f7-z7e">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -3830,12 +3817,21 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAi-WC-0Eh">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="136" y="0.0" width="22" height="19"/>
+                                                    </variation>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="星" translatesAutoresizingMaskIntoConstraints="NO" id="Xf6-LM-pxJ">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="79" y="0.0" width="18" height="19"/>
+                                                    </variation>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="星" translatesAutoresizingMaskIntoConstraints="NO" id="0hR-yv-AJ4">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="18" height="19"/>
+                                                    </variation>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
