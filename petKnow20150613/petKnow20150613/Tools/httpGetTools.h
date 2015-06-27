@@ -26,5 +26,5 @@
  *  @param block     返回block
         block   -   (^httpToolsBlock)(BOOL isOk,id result,NSString* error);
  */
-- (void)doGetWithParaments:(NSDictionary *)paraments addressIndex:(NSString *)index signFlag:(BOOL)signFlag onFinish:(httpToolsBlock)block;
+- (void)doGetWithParaments:(NSDictionary *)paraments addressIndex:(NSInteger)index signFlag:(BOOL)signFlag onFinish:(httpToolsBlock)block;
 @end

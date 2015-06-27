@@ -33,7 +33,6 @@
 }
 
 - (IBAction)configerAction:(id)sender {
-    NSLog(@"2");
     [self performSegueWithIdentifier:@"configer_success" sender:self];
 }
 
@@ -137,7 +136,17 @@
     /**
      *  获取用户账户拓展信息UserExtInfo
      */
+    NSMutableDictionary *send1 = [NSMutableDictionary new];
     
+    [send1 setObject:ACCOUNT_TOKEN forKey:@"token"];
+    [send1 setObject:@"GetUserExtInfo" forKey:@"action"];
+    [send1 setObject:@"18611746169" forKey:@"username"];
+    
+    
+    [[httpGetTools sharedInstance] doGetWithParaments:send1 addressIndex:2 signFlag:NO onFinish:^(BOOL isOk, id result, NSString *error) {
+        NSLog(@"%@",result);
+        
+    }];
     
     [_sharedInstanceView.header endRefreshing];
     [_sharedInstanceView.footer endRefreshing];

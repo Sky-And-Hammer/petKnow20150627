@@ -19,13 +19,19 @@
     return poster;
 }
 
-- (void)doGetWithParaments:(NSDictionary *)paraments addressIndex:(NSString *)index signFlag:(BOOL)signFlag onFinish:(httpToolsBlock)block{
+- (void)doGetWithParaments:(NSDictionary *)paraments addressIndex:(NSInteger )index signFlag:(BOOL)signFlag onFinish:(httpToolsBlock)block{
     NSString *addressUrl;
+    NSMutableDictionary *endParmets = [NSMutableDictionary dictionaryWithDictionary:paraments];
     if (index == 0) {
         addressUrl = @"http://m.dopetsknow.com/d/if/account.jhtml";
+        
+    }else if (index == 2){
+        NSString *url = @"http://123.57.226.86:8080/d/pet/";
+        addressUrl = [NSString stringWithFormat:@"%@%@.json",url,[endParmets objectForKey:@"action"]];
+        [endParmets removeObjectForKey:@"action"];
     }
     
-    MKNetworkOperation *op = [self.myself operationWithURLString:addressUrl params:paraments httpMethod:@"GET" signFlag:signFlag];
+    MKNetworkOperation *op = [self.myself operationWithURLString:addressUrl params:endParmets httpMethod:@"GET" signFlag:signFlag];
     
     
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
