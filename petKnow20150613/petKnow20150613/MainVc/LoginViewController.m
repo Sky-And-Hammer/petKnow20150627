@@ -24,6 +24,7 @@
     [send setObject:[T_m_Tools md5HexDigest:@"zhidao123"] forKey:@"password"];
     [send setObject:@"UserLogin" forKey:@"action"];
     
+    
 //    [[httpGetTools sharedInstance] doGetWithParaments:send addressIndex:0 signFlag:YES onFinish:^(BOOL isOk, id result, NSString *error) {
 //        if (isOk) {
 ////            [NSUserDefaults standardUserDefaults] setObject:<#(id)#> forKey:<#(NSString *)#>

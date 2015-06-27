@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sg1-vU-0hT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sg1-vU-0hT">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -6464,15 +6464,6 @@
                                             <exclude reference="Maw-f1-kUP"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="5Y0-Vt-SEy"/>
-                                            <exclude reference="Egh-6i-AKa"/>
-                                            <exclude reference="XVf-D3-G68"/>
-                                            <exclude reference="cC2-40-MoL"/>
-                                            <exclude reference="dQV-bV-yJo"/>
-                                            <exclude reference="gja-Ih-GPw"/>
-                                            <exclude reference="plB-9B-jsg"/>
-                                            <exclude reference="rkN-7E-ie1"/>
-                                            <exclude reference="zWV-CF-uxh"/>
                                             <exclude reference="4A1-pg-qKV"/>
                                             <exclude reference="HMy-7l-nhQ"/>
                                             <exclude reference="luB-sX-Vc1"/>
@@ -6484,6 +6475,15 @@
                                             <exclude reference="evs-BL-Ixd"/>
                                             <exclude reference="qyG-6J-TOk"/>
                                             <exclude reference="y86-Nx-GLg"/>
+                                            <exclude reference="5Y0-Vt-SEy"/>
+                                            <exclude reference="Egh-6i-AKa"/>
+                                            <exclude reference="XVf-D3-G68"/>
+                                            <exclude reference="cC2-40-MoL"/>
+                                            <exclude reference="dQV-bV-yJo"/>
+                                            <exclude reference="gja-Ih-GPw"/>
+                                            <exclude reference="plB-9B-jsg"/>
+                                            <exclude reference="rkN-7E-ie1"/>
+                                            <exclude reference="zWV-CF-uxh"/>
                                         </mask>
                                     </variation>
                                     <variation key="heightClass=regular-widthClass=compact">
@@ -6493,15 +6493,6 @@
                                             <include reference="Maw-f1-kUP"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="5Y0-Vt-SEy"/>
-                                            <include reference="Egh-6i-AKa"/>
-                                            <exclude reference="XVf-D3-G68"/>
-                                            <exclude reference="cC2-40-MoL"/>
-                                            <exclude reference="dQV-bV-yJo"/>
-                                            <exclude reference="gja-Ih-GPw"/>
-                                            <exclude reference="plB-9B-jsg"/>
-                                            <include reference="rkN-7E-ie1"/>
-                                            <exclude reference="zWV-CF-uxh"/>
                                             <include reference="4A1-pg-qKV"/>
                                             <include reference="HMy-7l-nhQ"/>
                                             <include reference="luB-sX-Vc1"/>
@@ -6513,6 +6504,15 @@
                                             <include reference="evs-BL-Ixd"/>
                                             <include reference="qyG-6J-TOk"/>
                                             <include reference="y86-Nx-GLg"/>
+                                            <exclude reference="5Y0-Vt-SEy"/>
+                                            <include reference="Egh-6i-AKa"/>
+                                            <exclude reference="XVf-D3-G68"/>
+                                            <exclude reference="cC2-40-MoL"/>
+                                            <exclude reference="dQV-bV-yJo"/>
+                                            <exclude reference="gja-Ih-GPw"/>
+                                            <exclude reference="plB-9B-jsg"/>
+                                            <include reference="rkN-7E-ie1"/>
+                                            <exclude reference="zWV-CF-uxh"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
