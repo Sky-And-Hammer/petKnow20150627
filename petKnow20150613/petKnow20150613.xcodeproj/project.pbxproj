@@ -261,6 +261,7 @@
 		97BC1EB91B2ECF6A0044EC7B /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		97BC1EBB1B2ECF790044EC7B /* ForgetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPwdViewController.h; sourceTree = "<group>"; };
 		97BC1EBC1B2ECF790044EC7B /* ForgetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPwdViewController.m; sourceTree = "<group>"; };
+		97E3C57F1B3EE2BF00AB98A9 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		CFE2CEA71D24E1799E7630DE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FD1F92260DF3879ED8736F10 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -633,6 +634,7 @@
 		FAC5A28671C7BD2873FA40E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97E3C57F1B3EE2BF00AB98A9 /* libsqlite3.0.dylib */,
 				FD1F92260DF3879ED8736F10 /* libPods.a */,
 			);
 			name = Frameworks;

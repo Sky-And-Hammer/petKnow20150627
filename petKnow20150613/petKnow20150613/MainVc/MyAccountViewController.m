@@ -139,7 +139,7 @@
     NSMutableDictionary *send1 = [NSMutableDictionary new];
     
     [send1 setObject:ACCOUNT_TOKEN forKey:@"token"];
-    [send1 setObject:@"GetUserExtInfo" forKey:@"action"];
+    [send1 setObject:NETWORK_GET_USEREXTINFO_D forKey:@"action"];
     [send1 setObject:@"18611746169" forKey:@"username"];
     
     

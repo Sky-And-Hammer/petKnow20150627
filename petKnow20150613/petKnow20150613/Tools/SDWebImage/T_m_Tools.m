@@ -7,9 +7,12 @@
 //
 
 #import "T_m_Tools.h"
-#import <CommonCrypto/CommonDigest.h>
 
 @implementation T_m_Tools
+
+
+#pragma mark - 常用方法
+//--------------------------------------------------
 +(void)setImageToDest:(BOOL)yes1 AndThumbnail:(BOOL)yes2 AndURL:(NSString *)url AndDefaultImage:(NSString *)imageName AndBlock:(void (^)(UIImage *))animations{
     if (url.length > 0) {
         NSArray *array = [url componentsSeparatedByString:@"/"];
@@ -60,5 +63,4 @@
              result[12], result[13], result[14], result[15]
              ] lowercaseString];
 }
-
 @end
