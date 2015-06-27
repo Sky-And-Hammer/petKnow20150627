@@ -14,6 +14,7 @@
 		8EE0AA2A1B3D41130069BA2B /* ChangePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0AA291B3D41130069BA2B /* ChangePwdViewController.m */; };
 		8EE0AA301B3D482D0069BA2B /* RetroactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0AA2F1B3D482D0069BA2B /* RetroactionViewController.m */; };
 		8EE0AA331B3D4D760069BA2B /* Retroaction0_Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0AA321B3D4D760069BA2B /* Retroaction0_Cell.m */; };
+		8EE0AA371B3E5CE40069BA2B /* Retroaction1_Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0AA351B3D4F240069BA2B /* Retroaction1_Cell.m */; };
 		973E23991B3CFAE500089637 /* AccountInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 973E23981B3CFAE500089637 /* AccountInfoViewController.m */; };
 		973E239C1B3CFB5B00089637 /* AccountInfo0_Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 973E239B1B3CFB5B00089637 /* AccountInfo0_Cell.m */; };
 		973E239F1B3CFB6800089637 /* AccountInfo1_Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 973E239E1B3CFB6800089637 /* AccountInfo1_Cell.m */; };
@@ -715,7 +716,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97E3C5301B3E5A5D00AB98A9 /* Retroaction1_Cell.m in Sources */,
+				8EE0AA371B3E5CE40069BA2B /* Retroaction1_Cell.m in Sources */,
 				8EE0AA301B3D482D0069BA2B /* RetroactionViewController.m in Sources */,
 				973E23BF1B3D0FBC00089637 /* UIScrollView+MJExtension.m in Sources */,
 				973E23F61B3D469700089637 /* NSDictionary+RequestEncoding.m in Sources */,
