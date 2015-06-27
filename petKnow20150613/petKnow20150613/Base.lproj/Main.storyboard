@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sg1-vU-0hT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sg1-vU-0hT">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -3532,6 +3532,9 @@
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="星" translatesAutoresizingMaskIntoConstraints="NO" id="oex-mT-2wS">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="158" y="0.0" width="18" height="19"/>
+                                                    </variation>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0al-lT-cCE">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -3540,10 +3543,16 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8c-Bh-Z9a">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="18" y="0.0" width="22" height="19"/>
+                                                    </variation>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6N6-uT-G48">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="57" y="0.0" width="22" height="19"/>
+                                                    </variation>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="星" translatesAutoresizingMaskIntoConstraints="NO" id="lxH-zj-iJI">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -3551,12 +3560,21 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etM-wv-xYw">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="136" y="0.0" width="22" height="19"/>
+                                                    </variation>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="星" translatesAutoresizingMaskIntoConstraints="NO" id="q2K-gO-8ge">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="79" y="0.0" width="18" height="19"/>
+                                                    </variation>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="星" translatesAutoresizingMaskIntoConstraints="NO" id="HHj-wB-RaV">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="18" height="19"/>
+                                                    </variation>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -3771,6 +3789,9 @@
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="星" translatesAutoresizingMaskIntoConstraints="NO" id="yej-zt-iKF">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="158" y="0.0" width="18" height="19"/>
+                                                    </variation>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pG2-0E-eHq">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -3779,10 +3800,16 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8K-qU-tzs">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="18" y="0.0" width="22" height="19"/>
+                                                    </variation>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oby-bd-Ue3">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="57" y="0.0" width="22" height="19"/>
+                                                    </variation>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="星" translatesAutoresizingMaskIntoConstraints="NO" id="MB9-f7-z7e">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -3790,12 +3817,21 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAi-WC-0Eh">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="136" y="0.0" width="22" height="19"/>
+                                                    </variation>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="星" translatesAutoresizingMaskIntoConstraints="NO" id="Xf6-LM-pxJ">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="79" y="0.0" width="18" height="19"/>
+                                                    </variation>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="星" translatesAutoresizingMaskIntoConstraints="NO" id="0hR-yv-AJ4">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="18" height="19"/>
+                                                    </variation>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -6437,8 +6473,6 @@
                                             <exclude reference="n2X-Rp-58X"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="J5U-lt-2nD"/>
-                                            <exclude reference="ZbP-dx-kbs"/>
                                             <exclude reference="WQt-Ri-xzi"/>
                                             <exclude reference="aBv-oA-gAn"/>
                                             <exclude reference="7L7-2D-e9O"/>
@@ -6446,6 +6480,8 @@
                                             <exclude reference="Sff-b6-TBf"/>
                                             <exclude reference="ru6-Z7-w1B"/>
                                             <exclude reference="tBL-hs-z2u"/>
+                                            <exclude reference="J5U-lt-2nD"/>
+                                            <exclude reference="ZbP-dx-kbs"/>
                                         </mask>
                                     </variation>
                                     <variation key="heightClass=regular-widthClass=compact">
@@ -6455,8 +6491,6 @@
                                             <include reference="n2X-Rp-58X"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <include reference="J5U-lt-2nD"/>
-                                            <include reference="ZbP-dx-kbs"/>
                                             <include reference="WQt-Ri-xzi"/>
                                             <include reference="aBv-oA-gAn"/>
                                             <include reference="7L7-2D-e9O"/>
@@ -6464,6 +6498,8 @@
                                             <include reference="Sff-b6-TBf"/>
                                             <include reference="ru6-Z7-w1B"/>
                                             <include reference="tBL-hs-z2u"/>
+                                            <include reference="J5U-lt-2nD"/>
+                                            <include reference="ZbP-dx-kbs"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
@@ -6561,18 +6597,18 @@
                                             <exclude reference="NnF-ka-PJa"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="XhB-9I-ezl"/>
-                                            <exclude reference="bYg-Mb-ZsA"/>
-                                            <exclude reference="rB5-2h-nme"/>
                                             <exclude reference="BQo-YB-Jvh"/>
                                             <exclude reference="uxH-Dr-j1i"/>
+                                            <exclude reference="87f-Gl-11B"/>
+                                            <exclude reference="JAB-X6-0aQ"/>
+                                            <exclude reference="ZPb-33-8Es"/>
                                             <exclude reference="JQL-Bk-vKI"/>
                                             <exclude reference="LUn-DS-OqG"/>
                                             <exclude reference="SFQ-FT-pSE"/>
                                             <exclude reference="ttH-Wp-kJv"/>
-                                            <exclude reference="87f-Gl-11B"/>
-                                            <exclude reference="JAB-X6-0aQ"/>
-                                            <exclude reference="ZPb-33-8Es"/>
+                                            <exclude reference="XhB-9I-ezl"/>
+                                            <exclude reference="bYg-Mb-ZsA"/>
+                                            <exclude reference="rB5-2h-nme"/>
                                         </mask>
                                     </variation>
                                     <variation key="heightClass=regular-widthClass=compact">
@@ -6583,18 +6619,18 @@
                                             <include reference="NnF-ka-PJa"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <include reference="XhB-9I-ezl"/>
-                                            <include reference="bYg-Mb-ZsA"/>
-                                            <include reference="rB5-2h-nme"/>
                                             <include reference="BQo-YB-Jvh"/>
                                             <include reference="uxH-Dr-j1i"/>
+                                            <include reference="87f-Gl-11B"/>
+                                            <include reference="JAB-X6-0aQ"/>
+                                            <include reference="ZPb-33-8Es"/>
                                             <include reference="JQL-Bk-vKI"/>
                                             <include reference="LUn-DS-OqG"/>
                                             <include reference="SFQ-FT-pSE"/>
                                             <include reference="ttH-Wp-kJv"/>
-                                            <include reference="87f-Gl-11B"/>
-                                            <include reference="JAB-X6-0aQ"/>
-                                            <include reference="ZPb-33-8Es"/>
+                                            <include reference="XhB-9I-ezl"/>
+                                            <include reference="bYg-Mb-ZsA"/>
+                                            <include reference="rB5-2h-nme"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
