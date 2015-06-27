@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "T_m_Tools.h"
 #import "petKnowDefine.h"
+#import <pop/POP.h>
 
 @interface LoginViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
@@ -43,10 +44,13 @@
 - (IBAction)logionAction:(id)sender {
     if (_usernameTextField.text.length == 0 || _passwordTextField.text.length == 0) {
         [ProgressHUD showError:@"账号或密码必须全部填写"];
+        [self shakeButton];
     }else if (_usernameTextField.text.length != 11){
         [ProgressHUD showError:@"账号长度有误，请重新输入"];
+        [self shakeButton];
     }else if (_passwordTextField.text.length < 6 || _passwordTextField.text.length > 16){
         [ProgressHUD showError:@"密码是长度有误，请重新输入"];
+        [self shakeButton];
     }else{
         [self loginFuntion];
     }
@@ -93,6 +97,16 @@
 }
 
 #pragma mark -private methods
+- (void)shakeButton{
+    POPSpringAnimation *positionAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionX];
+    positionAnimation.velocity = @2000;
+    positionAnimation.springBounciness = 20;
+    [positionAnimation setCompletionBlock:^(POPAnimation *animation, BOOL finished) {
+        _loginButton.userInteractionEnabled = YES;
+    }];
+    [_loginButton.layer pop_addAnimation:positionAnimation forKey:@"positionAnimation"];
+}
+
 - (BOOL)isLogined{
     NSString *token = ACCOUNT_TOKEN;
     if (token.length == 0) {

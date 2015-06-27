@@ -28,6 +28,8 @@
 #pragma mark - UIAlertViewDelegate
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex != 0) {
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"accountToken"];
+        [self performSegueWithIdentifier:@"loginOut_success" sender:self];
         [ProgressHUD showSuccess:@"退出成功"];
     }
 }

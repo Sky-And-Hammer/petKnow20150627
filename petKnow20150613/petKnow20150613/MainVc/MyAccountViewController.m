@@ -11,8 +11,10 @@
 #import "MyAccount0_Cell.h"
 #import "MyAccount1_Cell.h"
 #import "MyAccount2_Cell.h"
+#import "MJRefresh.h"
 
 @interface MyAccountViewController ()
+@property (strong, nonatomic) IBOutlet UITableView *sharedInstanceView;
 
 @end
 
@@ -22,7 +24,7 @@
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = NO;
     
-    [self setupSubview];
+    [self setupSubviews];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,7 +75,7 @@
         lab1.text = arr1[i];
         lab1.textAlignment = NSTextAlignmentCenter;
         [backgroundView addSubview:lab1];
-
+        
     }
     
     
@@ -112,15 +114,9 @@
         
         return cell;
     }else if (indexPath.section == 1){
-//        if (indexPath.row % 2 == 0) {
-//            MyAccount2_Cell *cell = [tableView dequeueReusableCellWithIdentifier:@"myAccount2_cell" forIndexPath:indexPath];
-//            
-//            return cell;
-//        }else{
-            MyAccount1_Cell *cell = [tableView dequeueReusableCellWithIdentifier:@"myAccount1_cell" forIndexPath:indexPath];
-            
-            return cell;
-//        }
+        MyAccount1_Cell *cell = [tableView dequeueReusableCellWithIdentifier:@"myAccount1_cell" forIndexPath:indexPath];
+        
+        return cell;
     }
     
     return nil;
@@ -137,19 +133,19 @@
 }
 
 #pragma mark - private method
-- (void)setupSubview{
-    
-    
+- (void)refreshDataSource{
+    [_sharedInstanceView.header endRefreshing];
+    [_sharedInstanceView.footer endRefreshing];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setupSubviews{
+    __weak typeof(self) weakSelf = self;
+    [_sharedInstanceView addLegendHeaderWithRefreshingBlock:^{
+        [weakSelf refreshDataSource];
+    }];
+    [_sharedInstanceView addLegendFooterWithRefreshingBlock:^{
+        [weakSelf refreshDataSource];
+    }];
 }
-*/
 
 @end
