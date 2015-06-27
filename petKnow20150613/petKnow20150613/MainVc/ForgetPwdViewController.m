@@ -10,6 +10,11 @@
 
 @interface ForgetPwdViewController ()
 
+@property (strong, nonatomic) IBOutlet UITextField *accountNumTextField;
+@property (strong, nonatomic) IBOutlet UIView *line;
+@property (strong, nonatomic) IBOutlet UIButton *sendBtn;
+@property (strong, nonatomic) IBOutlet UIButton *cancleBtn;
+
 @end
 
 @implementation ForgetPwdViewController
@@ -22,6 +27,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)sendBtnClicked:(id)sender {
+    NSLog(@"确定");
+}
+- (IBAction)cancleBtnClicked:(id)sender {
+    NSLog(@"取消");
 }
 
 /*
