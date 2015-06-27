@@ -3087,17 +3087,17 @@
                                 <exclude reference="ZNs-hu-nBo"/>
                                 <exclude reference="ZPG-MN-c0B"/>
                                 <exclude reference="ZXT-LP-dHa"/>
+                                <exclude reference="KUy-dV-Xc5"/>
+                                <exclude reference="YqG-cD-G6S"/>
+                                <exclude reference="m12-ir-SVM"/>
+                                <exclude reference="6nv-4k-OFz"/>
+                                <exclude reference="Joh-bu-i6v"/>
+                                <exclude reference="mNG-eF-NCb"/>
                                 <exclude reference="4zJ-0U-GXH"/>
                                 <exclude reference="QGu-1N-bZW"/>
                                 <exclude reference="hb0-zl-ghC"/>
                                 <exclude reference="pzx-6j-zdY"/>
                                 <exclude reference="xL4-vm-FzC"/>
-                                <exclude reference="6nv-4k-OFz"/>
-                                <exclude reference="Joh-bu-i6v"/>
-                                <exclude reference="mNG-eF-NCb"/>
-                                <exclude reference="KUy-dV-Xc5"/>
-                                <exclude reference="YqG-cD-G6S"/>
-                                <exclude reference="m12-ir-SVM"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -3111,17 +3111,17 @@
                                 <include reference="ZNs-hu-nBo"/>
                                 <include reference="ZPG-MN-c0B"/>
                                 <include reference="ZXT-LP-dHa"/>
+                                <include reference="KUy-dV-Xc5"/>
+                                <include reference="YqG-cD-G6S"/>
+                                <include reference="m12-ir-SVM"/>
+                                <include reference="6nv-4k-OFz"/>
+                                <include reference="Joh-bu-i6v"/>
+                                <include reference="mNG-eF-NCb"/>
                                 <include reference="4zJ-0U-GXH"/>
                                 <exclude reference="QGu-1N-bZW"/>
                                 <exclude reference="hb0-zl-ghC"/>
                                 <include reference="pzx-6j-zdY"/>
                                 <include reference="xL4-vm-FzC"/>
-                                <include reference="6nv-4k-OFz"/>
-                                <include reference="Joh-bu-i6v"/>
-                                <include reference="mNG-eF-NCb"/>
-                                <include reference="KUy-dV-Xc5"/>
-                                <include reference="YqG-cD-G6S"/>
-                                <include reference="m12-ir-SVM"/>
                             </mask>
                         </variation>
                     </view>
