@@ -39,7 +39,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -52,9 +52,7 @@
         cell.subtitleLabel.text = [NSString stringWithFormat:@"%@条反馈信息",@"2"];
     }else if (indexPath.row == 2){
         cell.titleLabel.text = @"账号登出";
-    }else if (indexPath.row == 3){
-        cell.titleLabel.text = @"检查升级";
-    } else if (indexPath.row == 4) {
+    }else if (indexPath.row == 3) {
         cell.titleLabel.text = @"关于宠知道";
     }
     

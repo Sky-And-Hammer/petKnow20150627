@@ -36,16 +36,20 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 2;
+    if (section == 0) {
+        return 1;
+    }else{
+        return 2;
+    }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0) {
+    if (indexPath.section == 0) {
         return 150;
     } else {
        return 55;
@@ -54,13 +58,15 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0) {
+    if (indexPath.section == 0) {
         Retroaction0_Cell *cell = [tableView dequeueReusableCellWithIdentifier:@"retroaction0_Cell" forIndexPath:indexPath];
         return cell;
-    } else {
+    }else if (indexPath.section == 1) {
         Retroaction1_Cell *cell = [tableView dequeueReusableCellWithIdentifier:@"retroaction1_Cell" forIndexPath:indexPath];
         return cell;
     }
+    
+    return nil;
 }
 
 /*

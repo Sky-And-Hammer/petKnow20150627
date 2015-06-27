@@ -86,6 +86,7 @@
 		97BC1EB71B2D25450044EC7B /* DiagnosisInfo3_Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 97BC1EB61B2D25450044EC7B /* DiagnosisInfo3_Cell.m */; };
 		97BC1EBA1B2ECF6A0044EC7B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97BC1EB91B2ECF6A0044EC7B /* RegisterViewController.m */; };
 		97BC1EBD1B2ECF790044EC7B /* ForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97BC1EBC1B2ECF790044EC7B /* ForgetPwdViewController.m */; };
+		97E3C5301B3E5A5D00AB98A9 /* Retroaction1_Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE0AA351B3D4F240069BA2B /* Retroaction1_Cell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
