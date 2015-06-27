@@ -55,9 +55,7 @@
         [self loginFuntion];
     }
 }
-- (IBAction)forgetAction:(id)sender {
-    
-}
+
 - (IBAction)registerAction:(id)sender {
     
 }
@@ -117,6 +115,8 @@
 }
 
 - (void)loginFuntion{
+    [ProgressHUD show:@"登录中" Interaction:NO];
+    
     NSMutableDictionary *send = [NSMutableDictionary new];
     [send setObject:_usernameTextField.text forKey:@"username"];
     [send setObject:[T_m_Tools md5HexDigest:_passwordTextField.text] forKey:@"password"];
@@ -124,7 +124,9 @@
 #warning deviceid for notification
     
     [[httpGetTools sharedInstance] doGetWithParaments:send addressIndex:0 signFlag:YES onFinish:^(BOOL isOk, id result, NSString *error) {
+        
         if (isOk) {
+            [ProgressHUD dismiss];
             [[NSUserDefaults standardUserDefaults] setObject:[result objectForKey:@"token"] forKey:@"accountToken"];
             
             [self performSegueWithIdentifier:@"hadLogin_success" sender:self];

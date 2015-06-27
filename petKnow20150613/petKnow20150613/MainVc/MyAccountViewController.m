@@ -12,6 +12,7 @@
 #import "MyAccount1_Cell.h"
 #import "MyAccount2_Cell.h"
 #import "MJRefresh.h"
+#import "T_m_Tools.h"
 
 @interface MyAccountViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *sharedInstanceView;
@@ -128,12 +129,16 @@
 
 #pragma mark - UIGestureRecognizer
 - (void)headImageTapAction:(UITapGestureRecognizer *)sender{
-    NSLog(@"2");
     [self performSegueWithIdentifier:@"accountInfo_success" sender:self];
 }
 
 #pragma mark - private method
 - (void)refreshDataSource{
+    /**
+     *  获取用户账户拓展信息UserExtInfo
+     */
+    
+    
     [_sharedInstanceView.header endRefreshing];
     [_sharedInstanceView.footer endRefreshing];
 }
