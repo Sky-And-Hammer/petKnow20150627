@@ -31,12 +31,14 @@
     [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:completedOperation.responseData options:NSJSONReadingAllowFragments error:nil];
         
-        if (dic) {
+        NSNumber *i = [[dic objectForKey:@"result"] valueForKey:@"result"];
+        
+        if (i.integerValue == 1) {
             block(YES,dic,nil);
         }else{
-            block(NO,nil,@"操作失败");
+            block(NO,dic,[[dic objectForKey:@"result"] objectForKey:@"reason"]);
         }
-        
+
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
         block(FALSE,nil,@"服务器返回数据异常");
     }];
