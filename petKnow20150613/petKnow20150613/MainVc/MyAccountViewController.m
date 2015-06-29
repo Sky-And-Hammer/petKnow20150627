@@ -15,6 +15,9 @@
 #import "T_m_Tools.h"
 
 @interface MyAccountViewController ()
+{
+    NSDictionary *dataSource;
+}
 @property (strong, nonatomic) IBOutlet UITableView *sharedInstanceView;
 
 @end
@@ -26,6 +29,11 @@
     self.navigationController.navigationBarHidden = NO;
     
     [self setupSubviews];
+    
+    dataSource = [[NSUserDefaults standardUserDefaults] objectForKey:@"accountExtInfo"];
+    if (dataSource == nil) {
+        [self refreshDataSource];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,9 +44,7 @@
     [self performSegueWithIdentifier:@"configer_success" sender:self];
 }
 
-
 #pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;
 }
@@ -61,7 +67,14 @@
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 60)];
     backgroundView.backgroundColor = COLOR(44, 189, 164, 1);
-    NSArray *arr = @[@"6人", @"5.0分", @"19.0%"];
+    NSArray *arr;
+#warning level  －   超越行业平均水平(9999为未超过一定接诊次数，无此项)
+    if (dataSource != nil) {
+        arr = @[[NSString stringWithFormat:@"%@",[dataSource objectForKey:@"timesOfWork"]], [NSString stringWithFormat:@"%@",[dataSource objectForKey:@"evaluation"]], [NSString stringWithFormat:@"%@%%",[dataSource objectForKey:@"level"]],];
+    }else{
+        arr = @[@"0", @"0", @"0"];
+    }
+    
     NSArray *arr1 = @[@"已接诊", @"综合评价", @"超越同行"];
     for (int i = 0; i < arr.count; i++) {
         UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(0 + (backgroundView.frame.size.width / 3 * i), 0, backgroundView.frame.size.width / 3, backgroundView.frame.size.height / 2)];
@@ -112,6 +125,11 @@
         cell.headImageView.userInteractionEnabled = YES;
         [cell.headImageView addGestureRecognizer:headImageTap];
         
+        cell.accountNameLabel.text = [dataSource objectForKey:@"trueName"];
+        cell.accountTitleLabel.text = [dataSource objectForKey:@"title"];
+        [cell.hospitalNameLabel setTitle:[[dataSource objectForKey:@"hospitalObj"] objectForKey:@"name"] forState:UIControlStateNormal];
+        cell.noLabel.text = [dataSource objectForKey:@"identifyNumber"];
+        
         return cell;
     }else if (indexPath.section == 1){
         MyAccount1_Cell *cell = [tableView dequeueReusableCellWithIdentifier:@"myAccount1_cell" forIndexPath:indexPath];
@@ -142,11 +160,27 @@
     [send1 setObject:NETWORK_GET_USEREXTINFO_D forKey:@"action"];
     [send1 setObject:@"18611746169" forKey:@"username"];
     
-    
     [[httpGetTools sharedInstance] doGetWithParaments:send1 addressIndex:2 signFlag:NO onFinish:^(BOOL isOk, id result, NSString *error) {
-        NSLog(@"%@",result);
-        
+        if (isOk) {
+            dataSource = [result objectForKey:@"extInfo"];
+//            [[NSUserDefaults standardUserDefaults] setObject:[result objectForKey:@"extInfo"] forKey:@"accountExtInfo"];
+            [_sharedInstanceView reloadData];
+        }else{
+            if (result == nil) {
+                [ProgressHUD showError:error];
+            }else{
+                [ProgressHUD showError:[[result objectForKey:@"result"] objectForKey:@"reason"]];
+            }
+        }
     }];
+    
+    /**
+     *  获取医生（用户）评价列表
+     */
+    
+    NSMutableDictionary *send2 = [NSMutableDictionary new];
+    [send2 setObject:ACCOUNT_USERNAME forKey:@"username"];
+    [send2 setObject:ACCOUNT_TOKEN forKey:@"token"];
     
     [_sharedInstanceView.header endRefreshing];
     [_sharedInstanceView.footer endRefreshing];

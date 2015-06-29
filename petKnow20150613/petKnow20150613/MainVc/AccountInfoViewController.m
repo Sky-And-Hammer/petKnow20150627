@@ -21,13 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     self.view.backgroundColor = COLOR(241, 241, 243, 1);
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -78,6 +72,17 @@
         return cell;
     }else{
         AccountInfo1_Cell *cell = [tableView dequeueReusableCellWithIdentifier:@"accountInfo1_cell" forIndexPath:indexPath];
+        if (indexPath.row == 0) {
+            cell.titleLabel.text = @"所属医院";
+        }else if (indexPath.row == 1){
+            cell.titleLabel.text = @"职位职称";
+        }else if (indexPath.row == 2){
+            cell.titleLabel.text = @"兽医资格证";
+        }else if (indexPath.row == 3){
+            cell.titleLabel.text = @"兽医执业证";
+        }else if (indexPath.row == 4){
+            cell.titleLabel.text = @"所在城市";
+        }
         
         return cell;
     }
@@ -85,6 +90,9 @@
     return nil;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 /*
 // Override to support conditional editing of the table view.
