@@ -70,7 +70,7 @@
     NSArray *arr;
 #warning level  －   超越行业平均水平(9999为未超过一定接诊次数，无此项)
     if (dataSource != nil) {
-        arr = @[[NSString stringWithFormat:@"%@",[dataSource objectForKey:@"timesOfWork"]], [NSString stringWithFormat:@"%@",[dataSource objectForKey:@"evaluation"]], [NSString stringWithFormat:@"%@%%",[dataSource objectForKey:@"level"]],];
+        arr = @[[NSString stringWithFormat:@"%@人",[dataSource objectForKey:@"timesOfWork"]], [NSString stringWithFormat:@"%@次",[dataSource objectForKey:@"evaluation"]], [NSString stringWithFormat:@"%@%%",[dataSource objectForKey:@"level"]],];
     }else{
         arr = @[@"0", @"0", @"0"];
     }
@@ -98,6 +98,7 @@
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         [tableView deselectRowAtIndexPath:indexPath animated:NO];
+        
         return nil;
     }
     return indexPath;
@@ -129,6 +130,7 @@
         cell.accountTitleLabel.text = [dataSource objectForKey:@"title"];
         [cell.hospitalNameLabel setTitle:[[dataSource objectForKey:@"hospitalObj"] objectForKey:@"name"] forState:UIControlStateNormal];
         cell.noLabel.text = [dataSource objectForKey:@"identifyNumber"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         return cell;
     }else if (indexPath.section == 1){

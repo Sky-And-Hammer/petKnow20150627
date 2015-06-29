@@ -5932,11 +5932,15 @@
                                                         </mask>
                                                     </variation>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdS-cY-NRe">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdS-cY-NRe">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                     <state key="normal" title="Button">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="tableViewCellButtonClickAction:" destination="Q2r-tH-6kv" eventType="touchUpInside" id="puG-KP-m7q"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -5965,20 +5969,20 @@
                                                     <exclude reference="rdS-cY-NRe"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="1wY-Ep-cKh"/>
-                                                    <exclude reference="V4I-lG-j2r"/>
-                                                    <exclude reference="ZhT-zf-Lmk"/>
                                                     <exclude reference="IrO-wX-0vY"/>
                                                     <exclude reference="Wl3-rM-d1c"/>
-                                                    <exclude reference="4rD-OX-7ko"/>
-                                                    <exclude reference="KvJ-6H-bXA"/>
-                                                    <exclude reference="X7w-vi-d5z"/>
-                                                    <exclude reference="ejs-dD-00b"/>
                                                     <exclude reference="JvF-hh-LaA"/>
                                                     <exclude reference="osG-db-5BM"/>
                                                     <exclude reference="CtI-na-siK"/>
                                                     <exclude reference="Xtv-60-uLR"/>
                                                     <exclude reference="e2E-eb-xI2"/>
+                                                    <exclude reference="4rD-OX-7ko"/>
+                                                    <exclude reference="KvJ-6H-bXA"/>
+                                                    <exclude reference="X7w-vi-d5z"/>
+                                                    <exclude reference="ejs-dD-00b"/>
+                                                    <exclude reference="1wY-Ep-cKh"/>
+                                                    <exclude reference="V4I-lG-j2r"/>
+                                                    <exclude reference="ZhT-zf-Lmk"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -5990,20 +5994,20 @@
                                                     <include reference="rdS-cY-NRe"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="1wY-Ep-cKh"/>
-                                                    <include reference="V4I-lG-j2r"/>
-                                                    <include reference="ZhT-zf-Lmk"/>
                                                     <include reference="IrO-wX-0vY"/>
                                                     <include reference="Wl3-rM-d1c"/>
-                                                    <include reference="4rD-OX-7ko"/>
-                                                    <include reference="KvJ-6H-bXA"/>
-                                                    <include reference="X7w-vi-d5z"/>
-                                                    <include reference="ejs-dD-00b"/>
                                                     <include reference="JvF-hh-LaA"/>
                                                     <include reference="osG-db-5BM"/>
                                                     <include reference="CtI-na-siK"/>
                                                     <include reference="Xtv-60-uLR"/>
                                                     <include reference="e2E-eb-xI2"/>
+                                                    <include reference="4rD-OX-7ko"/>
+                                                    <include reference="KvJ-6H-bXA"/>
+                                                    <include reference="X7w-vi-d5z"/>
+                                                    <include reference="ejs-dD-00b"/>
+                                                    <include reference="1wY-Ep-cKh"/>
+                                                    <include reference="V4I-lG-j2r"/>
+                                                    <include reference="ZhT-zf-Lmk"/>
                                                 </mask>
                                             </variation>
                                         </view>
@@ -6039,6 +6043,7 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="contentLabel" destination="rdS-cY-NRe" id="aNW-Gp-yPU"/>
                                     <outlet property="titleLabel" destination="l0t-gw-dDX" id="wT1-Mj-TFM"/>
                                 </connections>
                             </tableViewCell>
@@ -6055,6 +6060,9 @@
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="sendClickAction:" destination="Q2r-tH-6kv" eventType="touchUpInside" id="OBb-9K-cGK"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -6101,6 +6109,9 @@
                             <outlet property="delegate" destination="Q2r-tH-6kv" id="7DP-9k-SgC"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="sharedInstanceView" destination="GOD-w8-Vpd" id="l0I-aH-7HY"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hh-N9-PLm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

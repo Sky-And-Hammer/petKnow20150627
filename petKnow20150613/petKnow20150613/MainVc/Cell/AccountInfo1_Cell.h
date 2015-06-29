@@ -10,6 +10,6 @@
 
 @interface AccountInfo1_Cell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+@property (weak, nonatomic) IBOutlet UIButton *contentLabel;
 
 @end
