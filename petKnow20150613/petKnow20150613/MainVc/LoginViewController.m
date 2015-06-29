@@ -128,6 +128,7 @@
         if (isOk) {
             [ProgressHUD dismiss];
             [[NSUserDefaults standardUserDefaults] setObject:[result objectForKey:@"token"] forKey:@"accountToken"];
+            [[NSUserDefaults standardUserDefaults] setObject:_usernameTextField.text forKey:@"accountUsername"];
             
             [self performSegueWithIdentifier:@"hadLogin_success" sender:self];
             

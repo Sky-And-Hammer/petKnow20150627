@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *accountTitleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *hospitalNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *noLabel;
+@property (weak, nonatomic) IBOutlet UIView *backGroundView;
 
 @end
