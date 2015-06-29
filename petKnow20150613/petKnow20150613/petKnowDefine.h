@@ -13,6 +13,8 @@
 //--------------------------------------------------
 #define NETWORK_GET_LOGIN_A @"UserLogin"                        //登陆
 #define NETWORK_GET_USEREXTINFO_D @"GetUserExtInfo"             //获得医生（用户）扩展信息
+#define NETWORK_GET_GETUSERPATIENTSLIST    @"GetUserPatientsList" // 获得患者列表
+#define NETWORK_GET_GETCONSULTLIST @"GetConsultList"              // 获得待诊列表
 
 
 

@@ -12,19 +12,25 @@
 #import "WaitDiagnosis2_Cell.h"
 #import "T_m_Tools.h"
 #import "MJRefresh.h"
+#import "petKnowDefine.h"
+
 
 @interface WaitDiagnosisViewController ()
 {
     BOOL tableViewFlag;
 }
 @property (strong, nonatomic) IBOutlet UITableView *sharedInstanceView;
-@property (nonatomic, strong) NSArray *arr;
+@property (retain, nonatomic) NSArray *dataArr;
+@property (retain, nonatomic) NSArray *waitArr;
+@property (retain, nonatomic) NSMutableArray *waitOwnerArr1;
+@property (retain, nonatomic) NSMutableArray *petArr;
 @end
 
 @implementation WaitDiagnosisViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self refreshDataSource];
     [self setupSubviews];
 }
 #pragma mark - privite methods
@@ -40,6 +46,56 @@
 }
 
 - (void)refreshDataSource{
+    
+    /**
+     *  获取患者列表 GetUserPatientDesc
+     
+     */
+    NSMutableDictionary *send1 = [NSMutableDictionary new];
+    
+    [send1 setObject:ACCOUNT_TOKEN forKey:@"token"];
+    [send1 setObject:NETWORK_GET_GETUSERPATIENTSLIST forKey:@"action"];
+    [send1 setObject:@"0" forKey:@"offset"];
+    [send1 setObject:@"10" forKey:@"count"];
+    [send1 setObject:@"18611746169" forKey:@"username"];
+    
+    
+    [[httpGetTools sharedInstance] doGetWithParaments:send1 addressIndex:2 signFlag:NO onFinish:^(BOOL isOk, id result, NSString *error) {
+        self.dataArr = [NSArray array];
+        self.dataArr = result[@"list"];
+        //        NSLog(@"患者列表%@",self.dataArr);
+        
+    }];
+#warning 待诊列表
+    /**
+     *  获得待诊列表 GetConsultList
+     */
+    NSMutableDictionary *send2 = [NSMutableDictionary new];
+    
+    
+    [send2 setObject:ACCOUNT_TOKEN forKey:@"token"];
+    [send2 setObject:NETWORK_GET_GETCONSULTLIST forKey:@"action"];
+    [send2 setObject:@"1" forKey:@"showWay"];
+    [send2 setObject:@"0" forKey:@"offset"];
+    [send2 setObject:@"10" forKey:@"count"];
+    [send2 setObject:@"18611746169" forKey:@"username"];
+    
+    [[httpGetTools sharedInstance] doGetWithParaments:send2 addressIndex:2 signFlag:NO onFinish:^(BOOL isOk, id result, NSString *error) {
+        
+        self.waitArr = [NSArray array];
+        self.waitArr = result[@"list"];
+        
+        NSLog(@"待诊个数%@",self.waitArr);
+        self.waitOwnerArr1 = [NSMutableArray array];
+        for (NSDictionary *dic in self.waitArr) {
+            [self.waitOwnerArr1 addObject:dic[@"owner"]];
+            
+        }
+        NSLog(@"主人个数%@",self.waitOwnerArr1);
+        
+        [_sharedInstanceView reloadData];
+    }];
+    
     [_sharedInstanceView.header endRefreshing];
     [_sharedInstanceView.footer endRefreshing];
 }
@@ -53,17 +109,7 @@
         [weakSelf refreshDataSource];
     }];
     
-    NSDictionary *dic = @{@"regId":@"1111", @"interrogationTimes":@"2", @"lastInterrogationTime":@"2015-05-03", @"ownerName":@"八哥", @"ownerAvatarUrl":@"xxxxx.com", @"species":@"dog", @"name":@"小怪兽", @"petId":@"000"};
-    NSDictionary *dic1 = @{@"regId":@"1112", @"interrogationTimes":@"4", @"lastInterrogationTime":@"2015-05-08", @"ownerName":@"八哥g", @"ownerAvatarUrl":@"xxxxpp.com", @"species":@"cat", @"name":@"小怪兽打到", @"petId":@"001"};
-    NSDictionary *dic2 = @{@"regId":@"1113", @"interrogationTimes":@"3", @"lastInterrogationTime":@"2015-05-06", @"ownerName":@"八哥gg", @"ownerAvatarUrl":@"xxxxpssp.com", @"species":@"cat", @"name":@"小怪兽打到", @"petId":@"002"};
-    NSDictionary *dic3 = @{@"regId":@"1112", @"interrogationTimes":@"4", @"lastInterrogationTime":@"2015-05-08", @"ownerName":@"八哥g", @"ownerAvatarUrl":@"xxxxpp.com", @"species":@"cat", @"name":@"小怪兽打到", @"petId":@"003"};
-    NSDictionary *dic4 = @{@"regId":@"1112", @"interrogationTimes":@"4", @"lastInterrogationTime":@"2015-05-08", @"ownerName":@"八哥g", @"ownerAvatarUrl":@"xxxxpp.com", @"species":@"cat", @"name":@"小怪兽打到", @"petId":@"004"};
-    self.arr = @[dic, dic1, dic2, dic3, dic4];
-    NSMutableDictionary *getDic = [NSMutableDictionary dictionary];
-    [getDic setObject:@"true" forKey:@"resultObject"];
-    [getDic setObject:@"5" forKey:@"total"];
-    [getDic setObject:self.arr forKey:@"list"];
-
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -72,7 +118,11 @@
 #pragma mark - UITableViewDataSource & UITableViewDelegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 5;
+    if (tableViewFlag) {
+        return self.dataArr.count;
+    } else {
+        return 10;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -121,17 +171,24 @@
     
     if (tableViewFlag) {
         WaitDiagnosis2_Cell *cell = [tableView dequeueReusableCellWithIdentifier:@"waitDiagnosis2_cell" forIndexPath:indexPath];
+        cell.painetName.text = [[self.dataArr objectAtIndex:indexPath.row] objectForKey:@"name"];
+        //        cell.presentSDiagnosisDateLab.text = [[self.dataArr objectAtIndex:indexPath.row] objectForKey:@"lastInterrogationTime"];
+        NSString *str = [NSString stringWithFormat:@"%@",[[self.dataArr objectAtIndex:indexPath.row] objectForKey:@"lastInterrogationTime"]];
+        cell.presentSDiagnosisDateLab.text = str;
         
+#warning 添加图片链接
+        [T_m_Tools setImageToDest:NO AndThumbnail:NO AndURL:[[self.dataArr objectAtIndex:indexPath.row] objectForKey:@"ownerAvatarUrl" ] AndDefaultImage:@"" AndBlock:^(UIImage *image) {
+            cell.headImageView.image = image;
+        }];
         return cell;
     }else{
         if ((indexPath.section % 2) == 1) {
             WaitDiagnosis0_Cell *cell = (WaitDiagnosis0_Cell *)[tableView dequeueReusableCellWithIdentifier:@"waitDiagnosis0_cell" forIndexPath:indexPath];
             
-            [T_m_Tools setImageToDest:YES AndThumbnail:YES AndURL:nil AndDefaultImage:@"morentouxiang" AndBlock:^(UIImage *image) {
+            [T_m_Tools setImageToDest:YES AndThumbnail:YES AndURL:[[self.waitArr objectAtIndex:indexPath.row] objectForKey:@"avatarUrl"] AndDefaultImage:@"morentouxiang" AndBlock:^(UIImage *image) {
                 cell.headImageView.image = image;
-                cell.nameLabel.text = [self.arr[0] objectForKey:@"name"];
-                cell.contentTextView.text = @"还不知道该说点什么";
-                cell.petInfoLabel.text = @"拉肚子";
+                cell.contentTextView.text = [[self.waitArr objectAtIndex:indexPath.section] objectForKey:@"description"];
+//                cell.petInfoLabel.text = [[self.petArr objectAtIndex:indexPath.section] objectForKey:@"variety"];
                 cell.waitTimeLabel.text = @"已候诊30分钟";
             }];
             
@@ -139,16 +196,14 @@
         }else{
             WaitDiagnosis1_Cell *cell = (WaitDiagnosis1_Cell *)[tableView dequeueReusableCellWithIdentifier:@"waitDiagnosis1_cell" forIndexPath:indexPath];
             
-            [T_m_Tools setImageToDest:YES AndThumbnail:YES AndURL:nil AndDefaultImage:@"morentouxiang" AndBlock:^(UIImage *image) {
+            [T_m_Tools setImageToDest:YES AndThumbnail:YES AndURL:[[self.waitArr objectAtIndex:indexPath.row] objectForKey:@"avatarUrl"] AndDefaultImage:@"morentouxiang" AndBlock:^(UIImage *image) {
                 cell.headImageView.image = image;
-                cell.nameLabel.text = [self.arr[2] objectForKey:@"name"];
-                cell.contentTextView.text = @"还不知道该说点什么,还是不知道该说点什么";
-                cell.petInfoLabel.text = @"不吃东西";
+//                cell.petInfoLabel.text = [[self.waitArr objectAtIndex:indexPath.section] objectForKey:@"variety"];
                 cell.waitTimeLabel.text = @"已候诊80分钟";
             }];
             return cell;
         }
-
+        
     }
     
     return nil;
