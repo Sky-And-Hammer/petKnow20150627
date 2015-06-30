@@ -40,6 +40,25 @@
         NSNumber *i = [[dic objectForKey:@"result"] valueForKey:@"result"];
         
         if (i.integerValue == 1) {
+//            NSMutableDictionary *result = [NSMutableDictionary dictionaryWithDictionary:[dic objectForKey:@"extInfo"]];
+//            for (id akey in [result allKeys]) {
+//                NSLog(@"K = %@, V = %@",akey,[dic objectForKey:akey]);
+//                id aValue = [result objectForKey:akey];
+//                if ([akey isEqualToString:@"hospitalObj"]) {
+//                    if ([aValue isKindOfClass:[NSArray class]] || [aValue isKindOfClass:[NSDictionary class]]) {
+//                        NSLog(@"*******************************");
+//                    }else{
+//                        if (aValue == nil) {
+//                            
+//                        }
+//                        
+//                        if ([aValue isEqual:[NSNull null]]) {
+//                            
+//                        }
+//                    }
+//                }
+//            }
+            
             block(YES,dic,nil);
         }else{
             block(NO,dic,[[dic objectForKey:@"result"] objectForKey:@"reason"]);

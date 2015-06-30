@@ -47,6 +47,7 @@
 		97A1D83F1B346FE0008C5964 /* petKnowInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A1D83E1B346FE0008C5964 /* petKnowInfoViewController.m */; };
 		97A1D8461B3471CD008C5964 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 97A1D8431B3471CD008C5964 /* ProgressHUD.bundle */; };
 		97A1D8471B3471CD008C5964 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A1D8451B3471CD008C5964 /* ProgressHUD.m */; };
+		97B5871B1B412166004F9EBC /* httpPostTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B5871A1B412166004F9EBC /* httpPostTools.m */; };
 		97BC1E281B2BF4C30044EC7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97BC1E271B2BF4C30044EC7B /* main.m */; };
 		97BC1E2B1B2BF4C30044EC7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97BC1E2A1B2BF4C30044EC7B /* AppDelegate.m */; };
 		97BC1E311B2BF4C30044EC7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97BC1E2F1B2BF4C30044EC7B /* Main.storyboard */; };
@@ -182,6 +183,8 @@
 		97A1D8431B3471CD008C5964 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		97A1D8441B3471CD008C5964 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		97A1D8451B3471CD008C5964 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		97B587191B412166004F9EBC /* httpPostTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = httpPostTools.h; sourceTree = "<group>"; };
+		97B5871A1B412166004F9EBC /* httpPostTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = httpPostTools.m; sourceTree = "<group>"; };
 		97BC1E221B2BF4C30044EC7B /* petKnow20150613.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petKnow20150613.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BC1E261B2BF4C30044EC7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97BC1E271B2BF4C30044EC7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -581,6 +584,8 @@
 				973E23D81B3D405100089637 /* httpTools.m */,
 				9779D95B1B3D509800DC56A4 /* httpGetTools.h */,
 				9779D95C1B3D509800DC56A4 /* httpGetTools.m */,
+				97B587191B412166004F9EBC /* httpPostTools.h */,
+				97B5871A1B412166004F9EBC /* httpPostTools.m */,
 				97BC1E7B1B2BF5980044EC7B /* T_m_Tools.h */,
 				97BC1E7C1B2BF5980044EC7B /* T_m_Tools.m */,
 				973E23A51B3D0FBC00089637 /* MjRefresh */,
@@ -846,6 +851,7 @@
 				97BC1E641B2BF5880044EC7B /* WaitDiagnosisViewController.m in Sources */,
 				97BC1E981B2BF5980044EC7B /* UIImage+WebP.m in Sources */,
 				97BC1E5E1B2BF5880044EC7B /* BaseTabViewController.m in Sources */,
+				97B5871B1B412166004F9EBC /* httpPostTools.m in Sources */,
 				2082D8AB1B32578C006C20C8 /* MyAccount1_Cell.m in Sources */,
 				97BC1E8D1B2BF5980044EC7B /* SDImageCache.m in Sources */,
 				97BC1E8C1B2BF5980044EC7B /* NSData+ImageContentType.m in Sources */,

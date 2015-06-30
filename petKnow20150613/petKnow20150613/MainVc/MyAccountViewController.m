@@ -180,9 +180,12 @@
      *  获取医生（用户）评价列表
      */
     
+    
+    
     NSMutableDictionary *send2 = [NSMutableDictionary new];
     [send2 setObject:ACCOUNT_USERNAME forKey:@"username"];
     [send2 setObject:ACCOUNT_TOKEN forKey:@"token"];
+    
     
     [_sharedInstanceView.header endRefreshing];
     [_sharedInstanceView.footer endRefreshing];
