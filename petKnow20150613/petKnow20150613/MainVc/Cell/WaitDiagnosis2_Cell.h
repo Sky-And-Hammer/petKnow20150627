@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface WaitDiagnosis2_Cell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UIImageView *headImageView;
+@property (strong, nonatomic) IBOutlet UILabel *painetName;
+@property (strong, nonatomic) IBOutlet UILabel *presentSDiagnosisDateLab;
 
 @end
