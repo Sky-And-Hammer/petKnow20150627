@@ -121,7 +121,7 @@
     [send setObject:_usernameTextField.text forKey:@"username"];
     [send setObject:[T_m_Tools md5HexDigest:_passwordTextField.text] forKey:@"password"];
     [send setObject:NETWORK_GET_LOGIN_A forKey:@"action"];
-#warning deviceid for notification
+#warning deviceid传入
     
     [[httpGetTools sharedInstance] doGetWithParaments:send addressIndex:0 signFlag:YES onFinish:^(BOOL isOk, id result, NSString *error) {
         
